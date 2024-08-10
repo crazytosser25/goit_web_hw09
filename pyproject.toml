@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "homework09"
+version = "0.1.0"
+description = "GoIT Homework 9"
+package-mode = false
+authors = ["Yevhenii Baranov <j52b10i78@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+scrapy = "^2.11.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
