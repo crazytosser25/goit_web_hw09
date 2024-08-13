@@ -33,10 +33,15 @@ Execution:
 """
 import os
 import sys
+import warnings
 from mongoengine import connect
 from dotenv import load_dotenv
 from models import Authors, Quotes
+from cryptography.utils import CryptographyDeprecationWarning
 # pylint: disable=no-member
+
+warnings.filterwarnings("ignore", category=CryptographyDeprecationWarning)
+
 
 
 load_dotenv()
@@ -110,7 +115,7 @@ def main() -> None:
         SystemExit: When the user issues the `exit` command.
     """
     text = input(
-        "Enter command without spaces(name:, tag:, tags:, exit): "
+        "\nEnter command without spaces(name:, tag:, tags:, exit): "
     ).strip()
     try:
         com, arg = text.split(":")

@@ -11,4 +11,4 @@ class QuotesSpiderItem(scrapy.Item):
     # name = scrapy.Field()
     author = scrapy.Field()
     quote = scrapy.Field()
-    tag = scrapy.Field()
+    tags = scrapy.Field()
